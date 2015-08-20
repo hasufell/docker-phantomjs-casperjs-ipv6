@@ -6,4 +6,4 @@
 
 ## Run
 
-`docker run -i -v `pwd`/www:/var/www:ro hasufell/phantomjs`
+`docker run -i -v "$(pwd)"/www:/var/www:ro hasufell/phantomjs`
