@@ -12,6 +12,7 @@ sed -e \
 	"s#^var test_address = .*#var test_address = \"${TEST_ADDRESS}\"\;#" \
 	/var/www/start.js > start.js || die "failed to set test address"
 
-casperjs test start.js
+# make sure we ignore ssl errors!
+casperjs --ignore-ssl-errors=yes test start.js
 
 exit
