@@ -45,4 +45,7 @@ COPY www /var/www
 ADD run.sh /root/run.sh
 RUN chmod +x /root/run.sh
 
+# used in run.sh
+ENV TEST_ADDRESS "http://ipv6.google.com/"
+
 CMD ["/root/run.sh"]
