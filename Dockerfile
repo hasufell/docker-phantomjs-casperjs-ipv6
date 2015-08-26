@@ -13,6 +13,9 @@ RUN chgrp paludisbuild /dev/tty && cave resolve -z phantomjs -x
 # install casperjs dependencies
 RUN chgrp paludisbuild /dev/tty && cave resolve -z dev-python/pip dev-python/virtualenv -x
 
+# update etc files
+RUN etc-update --automode -5
+
 # install casperjs
 WORKDIR /opt
 RUN git clone --depth=1 git://github.com/n1k0/casperjs.git
